@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/music" android:icon="@drawable/ic_music_black_circular_button" android:title="@string/music"></item>
+<item android:id="@+id/meditation" android:icon="@drawable/ic_meditation_dark_blue" android:title="@string/meditation"></item>
+<item android:id="@+id/sleep" android:icon="@drawable/ic_moon_dark_blue" android:title="@string/sleep"></item>
+<item android:id="@+id/home" android:icon="@drawable/ic_home_dark_blue" android:title="@string/home"></item>
+</menu>
