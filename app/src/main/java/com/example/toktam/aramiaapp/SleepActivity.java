@@ -5,18 +5,29 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.Menu;
 import android.view.MenuItem;
 
 public class SleepActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
-
+    RecyclerView recyclerView;
+    DataAdapterItem dataAdapterItem;
     /******************/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sleep);
         setBottomNavigationView();
+
+        /****************/
+        recyclerView=(RecyclerView)findViewById(R.id.recycler_view);
+        dataAdapterItem=new DataAdapterItem(this,DataFakeGenerator.getData(this));
+        recyclerView.setLayoutManager(new GridLayoutManager(this,2,LinearLayoutManager.VERTICAL,false));
+        recyclerView.setAdapter(dataAdapterItem);
         /****************/
     }//onCreat
 
@@ -47,4 +58,5 @@ public class SleepActivity extends AppCompatActivity {
         });
     }
 /******************/
+
 }//class

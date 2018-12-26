@@ -5,10 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SleepActivity">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="sleep"/>
+   <android.support.v7.widget.RecyclerView
+       android:id="@+id/recycler_view"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:padding="10dp"/>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -22,6 +24,7 @@
         android:id="@+id/bottom_navigation"
         android:pointerIcon="zoom_in"
         app:menu="@menu/menu_bottom_nav"
+        app:labelVisibilityMode="labeled"
         >
     </android.support.design.widget.BottomNavigationView>
     </RelativeLayout>

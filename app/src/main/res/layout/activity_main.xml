@@ -9,6 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="home"/>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -22,6 +23,7 @@
         android:id="@+id/bottom_navigation"
         android:pointerIcon="zoom_in"
         app:menu="@menu/menu_bottom_nav"
+        app:labelVisibilityMode="labeled"
         >
     </android.support.design.widget.BottomNavigationView>
     </RelativeLayout>
